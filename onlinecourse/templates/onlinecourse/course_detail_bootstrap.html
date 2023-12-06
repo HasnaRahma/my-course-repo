@@ -45,12 +45,12 @@
             <div class="card-columns-vertical">
                 {% for lesson in course.lesson_set.all %}
                     <div class="card mt-1">
-                        <div class="cMard-header"><h5>Lesson {{lesson.order|add:1}}: {{lesson.title}}</h5></div>
+                        <div class="card-header"><h5>Lesson {{lesson.order|add:1}}: {{lesson.title}}</h5></div>
                         <div class="card-body">{{lesson.content}}</div>
                     </div>
                 {% endfor %}
             </div>
-            {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
         </br>
         <button class="btn btn-primary btn-block" data-toggle="collapse" data-target="#exam">Start Exam</button>
         <div id="exam" class="collapse">
